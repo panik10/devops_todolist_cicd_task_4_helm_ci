@@ -59,7 +59,7 @@ jobs:
       - name: Upload HELM Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: python-artifacts
+          name: helm-artifacts
           path: ${{ github.workspace }}/helm-charts
 
 
