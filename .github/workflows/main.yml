@@ -104,7 +104,7 @@ jobs:
         uses: azure/setup-helm@v4.2.0
 
       - name: LINT HELM
-        run helm lint ./todoapp
+        run: helm lint ./todoapp
 
       - name: Template HELM
         run: helm template todoapp ./todoapp -f /todoapp/values.yaml
@@ -115,5 +115,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: helm=package
+          name: helm-package
           path: ./*.tgz
