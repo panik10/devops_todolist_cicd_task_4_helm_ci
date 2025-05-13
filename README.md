@@ -11,20 +11,20 @@ To complete this task, you will need:
 
 In this project, I extended the GitHub Actions workflow by adding Helm CI steps and Docker image publishing:
 
-    Updated the repository with my DockerHub credentials using GitHub Secrets.
+- Updated the repository with my DockerHub credentials using GitHub Secrets.
 
-    Added a new helm-ci job to the workflow.
+- Added a new helm-ci job to the workflow.
 
-    Ensured that the repository is checked out only once per workflow run to optimize performance.
+- Ensured that the repository is checked out only once per workflow run to optimize performance.
 
-    The helm-ci job includes the following steps:
+- The helm-ci job includes the following steps:
 
-        - Downloads Helm-related artifacts.
+    - Downloads Helm-related artifacts.
 
-        - Executes helm template to render the chart.
+    - Executes helm template to render the chart.
 
-        - Runs helm lint to validate the chart.
+    - Runs helm lint to validate the chart.
 
-        - Packages the Helm chart.
+    - Packages the Helm chart.
 
-        - Uploads the chart package as a GitHub Actions artifact.
+    - Uploads the chart package as a GitHub Actions artifact.
